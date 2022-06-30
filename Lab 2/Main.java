@@ -19,30 +19,19 @@ public class Main {
         sc.nextLine();
         while (sc.hasNextLine()) {
             UniData ud = new UniData();
-            // UniData ud = new UniData(sc.next(), sc.next(), toLower(sc.next()), roundAll(zero(sc.next())), sc.next(), sc.next(), sc.next(), sc.next());
             ud.setYear(sc.next());
             ud.setRank(deleteRank(sc.next()));
-            // ud.setRank(sc.next());
             ud.setUniName(toLower(sc.next()));
-            // ud.setScore((ud.getRank() == "N/A")? "0" : zero(sc.next()));
             ud.setScore(roundAll(zero(sc.next())));
             ud.setLink(sc.next());
             ud.setCountry(sc.next());
             ud.setCity(sc.next());
-            // ud.setRegion(sc.next());
             ud.setLogo(sc.next());
-            // System.out.println(ud);
             uniList.add(ud);
             sc.nextLine();
         }
 
-        // System.out.println(uniList.get(0).city);
-
-        // Collections.sort(ArrayList<UniData> uniList);
-
         sort(uniList);
-
-        // System.out.println(uniList);
 
         // write all data to csv file.
         // P2 #2 the output of sorted uni name of Part 1 and 2 in a new CSV file
@@ -55,7 +44,6 @@ public class Main {
                 pw.println(uniData);
             }
             
-            // pw.flush();
             pw.close();
 
         } catch (Exception e) {

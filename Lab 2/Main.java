@@ -85,16 +85,8 @@ public class Main {
         return String.valueOf((int)Math.round(number));
     }
     
-    // P1 #4
+    // P1 #4 Remove rank that is not a digit from the list
     public static String deleteRank(String str){
-        // if (str == "N/A") {
-        //     str = "";
-        // }
-        // return str;
-        // if (((Object)Integer.parseInt(str)).getClass().getSimpleName() != "Integer") {
-        //     str = "-";
-        // }
-        // return str;
         if (!isNumericInt(str)) {
             str = "-";
         }
